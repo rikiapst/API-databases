@@ -6,26 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finance Data</title>
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li>Stocks</li>
-        <li>ETFs</li>
-        <li>Forex</li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-
-  </main>
-  <footer>
-
-  </footer>
+Hello World
+<p id="covid">Initial Content</p>
+<script>
+  let covidElement = document.getElementById("covid");
+  
+  async function resolvePromise(){
+    var covidResult = await axios.get("/covid1");
+    covidElement.innerHTML = JSON.stringify(covidResult.data);
+  }
+  resolvePromise();
+</script>
 </body>
 
 </html>
