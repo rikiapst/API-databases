@@ -1,0 +1,30 @@
+{
+  "name": "api-databases",
+  "version": "1.0.0",
+  "description": "Creating service level APIs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rikiapst/API-databases.git"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "server",
+    "database",
+    "SQL",
+    "standard"
+  ],
+  "author": "Rikia Stewart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rikiapst/API-databases/issues"
+  },
+  "homepage": "https://github.com/rikiapst/API-databases#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
