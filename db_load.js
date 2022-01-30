@@ -1,4 +1,5 @@
 const axios = require('axios');
+require('dotenv').config();
 const { Pool, Client } = require('pg')
 
 
@@ -10,12 +11,17 @@ async function start_app() {
 
     for (let i = 0; i < result.data.length; i++) {
         let item = result.data[i]
-        pool.query(`INSERT INTO covid1 (country, state, population, infectionRate) VALUES ('${item.country}', '${item.state}', '${item.population}', '${item.metrics.infectionRate}')`, (err, res) => {
-            //console.log(err, res)
-            //console.log(item)
+        pool.query(`INSERT INTO covid (country, state, population, infectionRate) VALUES ('${item.country}', '${item.state}', '${item.population}', '${item.metrics.infectionRate}')`, (err, res) => {
         })
     }
+    let item1 = result.data[0]
+    pool.query(`INSERT INTO covid1 (country, state, population, infectionRate) VALUES ('${item1.country}', '${item1.state}', '${item1.population}', '${item1.metrics.infectionRate}')`, (err, res) => {
+    })
+    let item2 = result.data[1]
+    pool.query(`INSERT INTO covid2 (country, state, population, infectionRate) VALUES ('${item2.country}', '${item2.state}', '${item2.population}', '${item2.metrics.infectionRate}')`, (err, res) => {
+    })
+
 }
 
-//console.log(process.env)
+console.log(process.env)
 start_app();
