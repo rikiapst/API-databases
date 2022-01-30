@@ -4,7 +4,7 @@ const { Pool, Client } = require('pg')
 
 async function tester() {
   const pool = new Pool()
-  pool.query("INSERT INTO person (first_name, last_name, gender, date_of_birth) VALUES ('Brian', 'Suga', 'MALE', date '1700-05-03')", (err, res) => {
+  pool.query("INSERT INTO person (first_name, last_name, gender, date_of_birth) VALUES ('Rana', 'Smith', 'FEMALE', date '1980-10-07')", (err, res) => {
     //console.log(err, res)
   })
 }
